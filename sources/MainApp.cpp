@@ -1,8 +1,7 @@
 #include <stdio.h>
-#include <opencv2/opencv.hpp>
 #include "Display.h"
 
-using namespace cv;
+using namespace AEther;
 
 int main(int argc, char** argv)
 {

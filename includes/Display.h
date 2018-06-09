@@ -6,16 +6,19 @@
 
 using namespace cv;
 
-class Display : public ADisplay
+namespace AEther
 {
-public:
-	// 생성자
-	Display(int width, int height);
+	class Display : public ADisplay
+	{
+	public:
+		// 생성자
+		Display(int width, int height);
 
-public:
-	virtual void Start();
+	public:
+		virtual void Start();
 
-	virtual void Update();
-};
+		virtual void Update();
+	};
+}
 #endif
 

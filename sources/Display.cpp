@@ -4,21 +4,24 @@
 
 using namespace cv;
 
-// 생성자
-Display::Display(int width, int height)
+namespace AEther
 {
-	SetWidth(width);
-	SetHeight(height);
-	display = new Mat(Height(), Width(), CV_8UC1);
-}
+	// 생성자
+	Display::Display(int width, int height)
+	{
+		SetWidth(width);
+		SetHeight(height);
+		display = new Mat(Height(), Width(), CV_8UC1);
+	}
 
-void Display::Start()
-{
-	SetFps(60.0);	
-}
+	void Display::Start()
+	{
+		SetFps(60.0);	
+	}
 
-void Display::Update()
-{
-	*display = Scalar(100);
+	void Display::Update()
+	{
+		*display = Scalar(100);
+	}	
 }
 

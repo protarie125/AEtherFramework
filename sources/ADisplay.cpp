@@ -3,22 +3,25 @@
 
 using namespace cv;
 
-void ADisplay::Run()
+namespace AEther
 {
-	Start();
-
-	while(1)
+	void ADisplay::Run()
 	{
-		Update();
+		Start();
+	
+		while(1)
+		{
+			Update();
 
-		namedWindow("Display");
-		imshow("Display", *display);
+			namedWindow("Display");
+			imshow("Display", *display);
 
-		int key = waitKey((int)(1000.0/fps));
-		if (key == 27) break;
+			int key = waitKey((int)(1000.0/fps));
+			if (key == 27) break;
+		}
+
+		destroyAllWindows();
+		delete display;
 	}
-
-	destroyAllWindows();
-	delete display;
-}
+}		
 

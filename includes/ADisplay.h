@@ -6,35 +6,38 @@
 
 using namespace cv;
 
-class ADisplay
+namespace AEther
 {
-private:
-	int width;
-	int height;
+	class ADisplay
+	{
+	private:
+		int width;
+		int height;
 
-	double fps;
+		double fps;
 
-public:
-	void Run();		
+	public:
+		void Run();		
 
-	virtual void Start() = 0;
+		virtual void Start() = 0;
 
-	virtual void Update() = 0;
+		virtual void Update() = 0;
 
-public: 
-	// Get
-	int Width() { return width; }
-	int Height() { return height; }
+	public: 
+		// Get
+		int Width() { return width; }
+		int Height() { return height; }
 	
-	double Fps() { return fps; }
+		double Fps() { return fps; }
 
-	// Set
-	void SetWidth(int _width) { width = _width; }
-	void SetHeight(int _height) { height = _height; }
+		// Set
+		void SetWidth(int _width) { width = _width; }
+		void SetHeight(int _height) { height = _height; }
 	
-	void SetFps(double _fps) { fps = _fps; }
+		void SetFps(double _fps) { fps = _fps; }
 
-	Mat* display;	
-};
+		Mat* display;	
+	};
+}
 #endif
 
